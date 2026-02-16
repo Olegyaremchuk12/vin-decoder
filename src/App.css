@@ -1,0 +1,293 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/*НАВИГАЦИЯ */
+.nav {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 15px 40px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+  gap: 30px;
+}
+
+.nav-link {
+  text-decoration: none !important; 
+  color: #64748b;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.2s ease;
+  border-bottom: 2px solid transparent; 
+}
+
+.nav-link:hover {
+  color: #3b82f6;
+  border-bottom-color: #3b82f6; 
+}
+
+/*  ФОРМА ВВОДА */
+.vin-form {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.vin-form input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+.vin-form button {
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* РЕЗУЛЬТАТЫ */
+.results-grid {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+
+.grid-header {
+  display: flex; 
+  background-color: #34495e;
+  color: white;
+  font-weight: bold;
+}
+
+.header-cell {
+  padding: 15px;
+  flex: 1; 
+}
+
+
+.grid-row {
+  display: flex; 
+  border-bottom: 1px solid #eee;
+}
+
+.grid-row:last-child {
+  border-bottom: none;
+}
+
+.grid-cell {
+  padding: 12px 15px;
+  word-break: break-word;
+  flex: 1; 
+}
+
+.grid-cell.label {
+  background-color: #fafafa;
+  font-weight: 600;
+  border-right: 1px solid #eee;
+  color: #2c3e50;
+}
+
+/* 
+    FLEX-КАРТОЧКИ*/
+
+.variables-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.variable-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border-top: 4px solid #3498db;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+  flex: 0 1 calc(33.333% - 14px); 
+  min-width: 280px;
+}
+
+.variable-item:hover {
+  transform: translateY(-5px);
+}
+
+
+
+
+.variable-item a, 
+.variable-item a:visited, 
+.variable-item a:focus {
+  color: #3498db !important;    
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+
+.variable-item a strong {
+  text-decoration: none !important;
+  color: inherit; 
+}
+
+
+.variable-item a:hover, 
+.variable-item a:active {
+  color: #3b82f6 !important;      
+  text-decoration: none !important;
+}
+
+
+.nav-link, 
+.variable-card a, 
+.back-link {
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+.nav-link:hover {
+  color: #3b82f6;
+}
+
+/* ДЕТАЛЬНАЯ СТРАНИЦА*/
+.detail-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ИСТОРИЯ ПОИСКА */
+.history-section {
+  margin: 25px 0;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.history-title {
+  font-size: 12px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.history-list {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px;       
+}
+
+/* СТИЛЬ САМОЙ КНОПКИ */
+.history-btn {
+  background: #f1f5f9;      
+  color: #475569;           
+  border: 1px solid #e2e8f0;
+  padding: 8px 18px;
+  border-radius: 25px;      
+  font-family: 'Courier New', monospace; 
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease; 
+  display: flex;
+  align-items: center;
+  outline: none;
+}
+
+
+.history-btn:hover {
+  background: #3b82f6;       
+  color: #ffffff;         
+  border-color: #3b82f6;
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.25);
+}
+
+
+.history-btn:active {
+  transform: translateY(0);
+  background: #2563eb;
+}
+
+
+
+
+
+/* 7. АДАПТИВНОСТЬ*/
+@media (max-width: 900px) {
+  .variable-item {
+    flex: 0 1 calc(50% - 10px); /* 2 карточки в ряд на планшетах */
+  }
+}
+
+@media (max-width: 768px) {
+  .vin-form {
+    flex-direction: column;
+  }
+  
+  .nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .grid-header {
+    display: none;
+  }
+
+  .grid-row {
+    flex-direction: column;
+    border-bottom: 2px solid #ddd;
+    padding: 10px 0;
+  }
+
+  .grid-cell.label {
+    border-right: none;
+    background: transparent;
+    padding-bottom: 5px;
+    flex: none; 
+  }
+  
+  .grid-cell.value {
+    padding-top: 0;
+    flex: none;
+  }
+
+  .variable-item {
+    flex: 1 1 100%; /
+  }
+}
