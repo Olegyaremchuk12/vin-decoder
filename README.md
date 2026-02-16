@@ -14,3 +14,30 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+
+##  Живая ссылка
+https://vin-decoder-psi.vercel.app
+
+##  Функционал 
+- **Декодирование VIN:** Получение данных о марке, модели и годе выпуска через API NHTSA.
+- **Валидация:** Проверка корректности ввода (длина кода и допустимые символы).
+- **Справочник:** Просмотр списка доступных переменных для декодирования.
+- **Адаптивность:** Удобный интерфейс для мобильных устройств и ПК.
+
+
+##  Инструкция по локальному запуску
+
+1. Клонируйте репозиторий:
+   git clone https://github.com/Olegyaremchuk12/vin-decoder.git
+
+
+2. Установите зависимости:
+   npm install
+
+3. Запустите проект:
+   npm run dev
+
+   
+
